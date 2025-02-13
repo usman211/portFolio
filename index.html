@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+    <style>
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#recommendation">Recommendation</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <div style="display: flex; align-items: center;">
+            <img src="Images/noimage.jpg" alt="About Me" style="margin-right: 20px;">
+            <p>Hello! I'm a passionate web developer with a love for creating dynamic and responsive websites. With a background in computer science and a keen eye for design, I strive to build user-friendly and visually appealing web applications. In my free time, I enjoy learning new technologies, contributing to open-source projects, and exploring the latest trends in web development.</p>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="Images/e-commerce.png" alt="Project 1" style="width: 100px; height: 100px; margin-right: 20px;">
+            <h3>E-Commerce website</h3>
+            <p>This project is a fully functional e-commerce website that allows users to browse products, add items to their cart, and securely checkout. It features a user-friendly interface, product search functionality, and an integrated payment gateway.</p>
+        </div>
+        <div class="project">
+            <img src="Images/inventory.jpg" alt="Project 2" style="width: 100px; height: 100px; margin-right: 20px;">
+            <h3>Inventory management system</h3>
+            <p>This project is a comprehensive inventory management system designed to help businesses track and manage their stock levels, orders, and deliveries. It features real-time inventory updates, automated reorder alerts, and detailed reporting capabilities.</p>
+        </div>
+        <div class="project">
+            <img src="Images/asset.jpg" alt="Project 3" style="width: 100px; height: 100px; margin-right: 20px;">
+            <h3>Asset management system</h3>
+            <p>This project is an asset management system that enables organizations to efficiently manage their assets throughout their lifecycle. It includes features such as asset tracking, maintenance scheduling, and depreciation calculation, ensuring optimal asset utilization and cost management.</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul style="display: flex; justify-content: space-between; list-style-type: none; padding: 0; width: 100%;">
+            <li style="text-align: center; flex: 1;">
+                <img src="Images/js.jpg" alt="JavaScript" style="width: 50px; height: 50px; display: block; margin: 0 auto;">
+                JavaScript
+            </li>
+            <li style="text-align: center; flex: 1;">
+                <img src="Images/html5.jpg" alt="HTML5" style="width: 50px; height: 50px; display: block; margin: 0 auto;">
+                HTML5
+            </li>
+            <li style="text-align: center; flex: 1;">
+                <img src="Images/nodjs.jpg" alt="Node.js" style="width: 50px; height: 50px; display: block; margin: 0 auto;">
+                Node.js
+            </li>
+            <li style="text-align: center; flex: 1;">
+                <img src="Images/sqlserver.png" alt="SQL Server" style="width: 50px; height: 50px; display: block; margin: 0 auto;">
+                SQL Server
+            </li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <section id="recommendation">
+        <h2>Recommendation</h2>
+        <form id="recommendationForm">
+            <label for="recName">Name:</label>
+            <input type="text" id="recName" name="recName" required>
+            <label for="recMessage">Message:</label>
+            <textarea id="recMessage" name="recMessage" required></textarea>
+            <button type="button" onclick="recordRecommendation()">Submit</button>
+        </form>
+        <div id="recommendationsContainer">
+            <h3>Recommendations</h3>
+            <ul id="recommendationsList"></ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+    <button id="backToTop" onclick="scrollToTop()">Top</button>
+    <script>
+        window.onscroll = function() {
+            var backToTopButton = document.getElementById("backToTop");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
